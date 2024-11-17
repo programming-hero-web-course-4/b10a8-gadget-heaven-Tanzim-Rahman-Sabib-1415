@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "iPhone 14 Pro",
+        "price": 999,
+        "type": "phone"
+    },
+    {
+        "id": 2,
+        "name": "Samsung Galaxy S23",
+        "price": 899,
+        "type": "phone"
+    },
+    {
+        "id": 3,
+        "name": "Google Pixel 7",
+        "price": 799,
+        "type": "phone"
+    },
+    {
+        "id": 4,
+        "name": "MacBook Pro 14",
+        "price": 1999,
+        "type": "laptop"
+    },
+    {
+        "id": 5,
+        "name": "Dell XPS 13",
+        "price": 1299,
+        "type": "laptop"
+    },
+    {
+        "id": 6,
+        "name": "HP Spectre x360",
+        "price": 1199,
+        "type": "laptop"
+    },
+    {
+        "id": 7,
+        "name": "OnePlus 11",
+        "price": 699,
+        "type": "phone"
+    },
+    {
+        "id": 8,
+        "name": "Asus ROG Zephyrus G14",
+        "price": 1499,
+        "type": "laptop"
+    }
+]
