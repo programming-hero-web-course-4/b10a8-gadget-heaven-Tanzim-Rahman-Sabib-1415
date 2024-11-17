@@ -6,6 +6,7 @@ import { getItemCart, getItemWishlist, removeItemCart, removeItemWishlist } from
 import ModalIcon from '../../assets/Group.png'
 import { ThemeContext } from '../../root';
 import { Helmet } from 'react-helmet-async';
+import { toast } from 'react-toastify';
 
 const Dashboard = () => {
     const { switchBtn, setSwitchBtn } = useContext(ThemeContext)
@@ -59,6 +60,15 @@ const Dashboard = () => {
     let priceAll = displayCart.reduce((sum, cur) => sum + cur.price, 0).toFixed(3)
     // console.log(displayCart)
 
+    const addToCart = (productId) => {
+        setCartList((prevCart) => {
+            const updatedCart = [...prevCart, productId];
+            localStorage.setItem('cart', JSON.stringify(updatedCart)); // Update localStorage
+            return updatedCart;
+        });
+        toast.success("Item added to cart");
+    };
+
     return (
         <div>
             <Helmet>
@@ -106,7 +116,13 @@ const Dashboard = () => {
                         <h1 className='text-2xl font-bold my-auto'>Wishlist</h1></div>
                 }
 
-                {!cartActive && (displayWishList.map(gadget => <Wishlist gadget={gadget} clickRemove={handleRemoveFromWishlist}></Wishlist>))}
+                {!cartActive && (displayWishList.map(gadget => 
+                    <Wishlist 
+                        gadget={gadget} 
+                        clickRemove={handleRemoveFromWishlist} 
+                        addToCart={addToCart}
+                    />
+                ))}
             </div>
 
             <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
