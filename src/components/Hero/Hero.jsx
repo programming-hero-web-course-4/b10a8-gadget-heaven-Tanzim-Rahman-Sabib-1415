@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Dummycard from '../Dummycard/Dummycard';
 import banner from '../../assets/banner.jpg'
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 const Hero = () => {
@@ -24,15 +24,17 @@ const Hero = () => {
     return (
         <div className='mb-[100px]'>
             <Helmet>
-            <title>Home</title>
+                <title>Home</title>
             </Helmet>
             <div className='bg-primary-1 h-[624px] mx-7 relative text-white'>
                 <div className='pt-12 text-center max-w-[1280px] mx-auto'>
                     <h1 className='text-[56px] font-bold mb-6 leading-tight'>Upgrade Your Tech Accessorize with Gadget Heaven Accessories</h1>
                     <p className='mb-8'>Explore the latest gadgets that will take your experience to the next level. From smart devices to <br></br> the coolest accessories, we have it all!</p>
-                    <a href='#mainveiw'>
-                    <button className='btn rounded-[32px] text-primary-1 font-bold text-[18px]'>Shop Now</button>
-                    </a>
+
+                    <Link to="dashboard">
+                        <button className='btn rounded-[32px] text-primary-1 font-bold text-[18px]'>Shop Now</button>
+                    </Link>
+
                 </div>
 
                 <div className='absolute -bottom-96 p-6 border-2 rounded-[32px] bg-white/30 h-[611px] w-[1110px] left-1/2 transform -translate-x-1/2 '>

@@ -8,7 +8,7 @@ GadgetHeaven is an e-commerce platform designed for gadget enthusiasts. The webs
 
 ## Live Website Link
 
-[Live Demo](#)  <!-- Replace with actual link -->
+[Live Demo](https://celebrated-sunflower-244ab8.netlify.app/)  <!-- Replace with actual link -->
 
 ## Requirement Document Link
 
